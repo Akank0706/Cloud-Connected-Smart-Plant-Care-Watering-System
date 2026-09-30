@@ -1,0 +1,52 @@
+[
+  {
+    "reading_id": "READ-001",
+    "device_id": "PLANT-001",
+    "soil_moisture": 55.0,
+    "temperature": 24.2,
+    "humidity": 68.0,
+    "light_level": 45.0,
+    "water_tank_level": 95.0,
+    "timestamp": "2026-09-29T06:00:00Z"
+  },
+  {
+    "reading_id": "READ-002",
+    "device_id": "PLANT-001",
+    "soil_moisture": 49.0,
+    "temperature": 26.5,
+    "humidity": 62.0,
+    "light_level": 70.0,
+    "water_tank_level": 95.0,
+    "timestamp": "2026-09-29T09:00:00Z"
+  },
+  {
+    "reading_id": "READ-003",
+    "device_id": "PLANT-001",
+    "soil_moisture": 39.5,
+    "temperature": 29.8,
+    "humidity": 54.0,
+    "light_level": 88.0,
+    "water_tank_level": 94.0,
+    "timestamp": "2026-09-29T12:00:00Z"
+  },
+  {
+    "reading_id": "READ-004",
+    "device_id": "PLANT-001",
+    "soil_moisture": 29.0,
+    "temperature": 31.2,
+    "humidity": 49.0,
+    "light_level": 92.0,
+    "water_tank_level": 94.0,
+    "timestamp": "2026-09-29T15:00:00Z"
+  },
+  {
+    "reading_id": "READ-005",
+    "device_id": "PLANT-001",
+    "soil_moisture": 58.0,
+    "temperature": 28.1,
+    "humidity": 64.0,
+    "light_level": 60.0,
+    "water_tank_level": 88.0,
+    "timestamp": "2026-09-29T15:05:00Z"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "event_id": "EVT-8001",
+    "device_id": "PLANT-001",
+    "trigger_type": "automatic",
+    "moisture_before": 29.0,
+    "moisture_after": 58.0,
+    "duration_ms": 3000,
+    "timestamp": "2026-09-29T15:00:30Z",
+    "water_consumed_ml": 60.0,
+    "reason": "Automated irrigation triggered: Soil moisture (29.0%) dropped below threshold (40.0%)."
+  },
+  {
+    "event_id": "EVT-8002",
+    "device_id": "PLANT-002",
+    "trigger_type": "manual",
+    "moisture_before": 18.0,
+    "moisture_after": 44.0,
+    "duration_ms": 2000,
+    "timestamp": "2026-09-28T18:22:15Z",
+    "water_consumed_ml": 40.0,
+    "reason": "Manual operator override from Cloud Dashboard"
+  }
+]

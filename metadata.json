@@ -1,0 +1,6 @@
+{
+  "name": "Cloud-Connected Smart Plant Care & Watering System",
+  "description": "Enterprise-grade IoT cloud platform for precision plant care with virtual sensor simulation, real-time telemetry, automated irrigation decision engine, and alerts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

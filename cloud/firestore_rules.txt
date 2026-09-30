@@ -1,0 +1,37 @@
+// Google Cloud Firestore Security Rules
+// Cloud-Connected Smart Plant Care & Watering System
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{db}/documents {
+    
+    // Helper function: verifies that the requesting user owns the plant device
+    function isOwner(uid, deviceId) {
+      return request.auth != null &&
+        get(/databases/$(db)/documents/devices/$(deviceId)).data.ownerUid == request.auth.uid;
+    }
+
+    match /devices/{deviceId} {
+      // Allow reading and configuration updates only if user owns the device
+      allow read: if isOwner(request.auth.uid, deviceId);
+      allow write: if isOwner(request.auth.uid, deviceId);
+
+      // Subcollection: Time-series telemetry readings
+      match /readings/{ts} {
+        allow read: if isOwner(request.auth.uid, deviceId);
+        // Only trusted backend cloud functions / ingest service write directly
+        allow write: if false; 
+      }
+
+      // Subcollection: Irrigation actuator actions (queue for ESP32 / pump)
+      match /actions/{aid} {
+        allow read, write: if isOwner(request.auth.uid, deviceId);
+      }
+    }
+
+    // System alerts collection
+    match /alerts/{alertId} {
+      allow read: if request.auth != null;
+      allow update: if request.auth != null && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status']);
+    }
+  }
+}
